@@ -1,53 +1,57 @@
+<?php include('header.php') ?> 
+
 <!DOCTYPE html>
 <html>
 <head>
 
 <style type="text/css">
 
-	.brand{
-    		background: whitesmoke !important;
-    		
-    	}
-    	.brand-text{
-    		color:black;
-    		text-align: center;
+.brand{
+	background: whitesmoke !important;
+}
 
-    	}
+.brand-text{
+	color:black;
+	text-align: center;
+}
 
-	.text-center {
-  width: 100%;
-  height: 70%;
-  position: absolute;
-  left: 50%;
-  top: 55%;
-  margin-top: 20px;
-  transform: translate(-50%,-50%);
-  background-image: url('16.jpg');
-  background-size: 100% 100%;
-  box-shadow: 1px 2px 10px 5px #375554;
-  animation: slider 30s infinite linear;
-  opacity: 0.7;
-
+.text-center {
+	width: 100%;
+	height: 70%;
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	margin-top: 20px;
+	transform: translate(-50%,-50%);
+	background-image: url(<?php echo IMG['16']; ?>);
+	background-size: 100% 100%;
+	box-shadow: 1px 2px 10px 5px #375554;
+	animation: slider 30s infinite linear;
+	opacity: 0.7;
 }
 
 @keyframes slider{
-	0%{ background-image: url('20.jpg'); }
-	20%{ background-image: url('5.jpg'); }
-	40%{ background-image: url('8.jpg'); }
-	60%{ background-image: url('12.jpg'); }
-	80%{ background-image: url('10.jpg'); }
-	100%{ background-image: url('13.jpg'); }
-	
-	
+	0%{ background-image: url(<?php echo IMG['20'] ?>); }
+	20%{ background-image: url(<?php echo IMG['5'] ?>); }
+	40%{ background-image: url(<?php echo IMG['8'] ?>); }
+	60%{ background-image: url(<?php echo IMG['12'] ?>); }
+	80%{ background-image: url(<?php echo IMG['10'] ?>); }
+	100%{ background-image: url(<?php echo IMG['13'] ?>); }
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	color: green;
 }
 
 .textHomePage{
 	color: white;
 	font-size: 28px;
 	text-align: center;
-	position: absolute;
-	margin-top: 350px;
-	margin-left: 400px;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-top: 250px;
 	background-color: #488280;
 	opacity: 0.7;
 }
@@ -60,23 +64,24 @@
 .icon{
 	margin-bottom: 0px;
 	background-color: #488280;
-
 }
+
 .image1{
 	height: 30px;
-  	margin-top: -43px;
-  	margin-left: 45%;
+	margin-top: -43px;
+	margin-left: 45%;
 }
+
 .image2{
 	height: 30px;
-  	margin-top: 10px;
-  	margin-left: 2.5%;
+	margin-top: 10px;
+	margin-left: 2.5%;
 }
+
 .image3{
 	height: 35px;
-  	margin-top: 10px;
-  	margin-left: 3%;
-	
+	margin-top: 10px;
+	margin-left: 3%;
 }
 
 
@@ -85,7 +90,8 @@
 </head>
 
 
-	<?php include('header.php') ?> 
+<?php include_once INCLUDES['home-header-template'] ?>
+
 
 <hr class="hori">
 <div class="text-center">
@@ -93,8 +99,7 @@
 </div>
 
 
- 
-<h3 class="textHomePage">
+<h3 class="textHomePage center">
 	"The artist is a receptacle for emotions that come from all over the place: from the sky,<br>from the earth, from a scrap of paper,from a passing shape,<br>from a spider's web. Inspiration exists, <br>but it has to find you working"<br>
 	-PABLO PICASSO
 </h3>
@@ -106,5 +111,5 @@
 		<a href="instagram.com" class="ins.png"></a>
 </div> -->
 
-<?php include('footer.php') ?> 
+<?php include_once(INCLUDES['footer-template']) ?>
 </html>
